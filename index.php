@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION['aH7rP8sJ3xGvFbK'])){
+    header("location: main/");
+    ?>
+        <script>
+            window.location.href = "./main"
+        </script>
+    <?php
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

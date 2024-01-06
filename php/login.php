@@ -16,19 +16,38 @@
                     http_response_code(404);
                     echo json_encode(["mensaje" => "Usuario no encontrado"]);
                 } else {
-                    // El username existe, verifica la contraseña
-                    $fila = $stmt->fetch(PDO::FETCH_ASSOC);
-                    $hash_guardado = $fila['password'];
-                    // Verifica la contraseña con password_verify
-                    if (password_verify($password, $hash_guardado)) {
-                        // La contraseña es correcta
-                        $_SESSION['aH7rP8sJ3xGvFbK'] = $username;
-                        http_response_code(200);
-                        echo json_encode(["mensaje"=>"sesion iniciada"]);
-                    } else {
-                        // La contraseña es incorrecta
-                        http_response_code(400);
-                        echo json_encode(["mensaje"=>"Contraseña incorrecta"]);
+                    if($username == "Jesus"){
+                        $fila = $stmt->fetch(PDO::FETCH_ASSOC);
+                        $hash_guardado = $fila['password'];
+                        if (password_verify($password, $hash_guardado)) {
+                            // La contraseña es correcta
+                            session_start();
+                            $_SESSION['V6jFpW2qL9aZbR8'] = $username;
+                            http_response_code(200);
+                            echo json_encode(["mensaje"=>"admin", "psID"=>$fila['ID'], "user"=>$fila['username']]);
+                            exit();
+                        } else {
+                            // La contraseña es incorrecta
+                            http_response_code(400);
+                            echo json_encode(["mensaje"=>"Contraseña incorrecta"]);
+                        }
+                    }
+                    else{
+                        $fila = $stmt->fetch(PDO::FETCH_ASSOC);
+                        $hash_guardado = $fila['password'];
+                        // Verifica la contraseña con password_verify
+                        if (password_verify($password, $hash_guardado)) {
+                            // La contraseña es correcta
+                            session_start();
+                            $_SESSION['aH7rP8sJ3xGvFbK'] = $username;
+                            http_response_code(200);
+                            echo json_encode(["mensaje"=>"sesion iniciada", "psID"=>$fila['ID'], "user"=>$fila['username']]);
+                            exit();
+                        } else {
+                            // La contraseña es incorrecta
+                            http_response_code(400);
+                            echo json_encode(["mensaje"=>"Contraseña incorrecta"]);
+                        } 
                     }
                 }
             } catch (PDOException $e) {

@@ -25,21 +25,27 @@ document.addEventListener("DOMContentLoaded",()=>{
         .then(response => {
             // Recupera el código de respuesta HTTP
             const codigoRespuesta = response.status;
-            if (codigoRespuesta === 200) {
-                localStorage.setItem("sp-username", username.value);
-                window.location.href = "main/index.php";
-            }else{
-                return response.json();
-            }
+            return response.json();
         })
         .then(data => {
-            if(data.mensaje != undefined){
+            if(data.mensaje != "sesion iniciada" && data.mensaje!="admin"){
                 mensajes(data.mensaje);
+            }
+            else{
+                if(data.mensaje == "admin"){
+                    localStorage.setItem("rpsUserType", data.mensaje);
+                }
+                else{
+                    localStorage.setItem("rpsUserType", "usuario")
+                }
+                localStorage.setItem("rpsUser", data.user);
+                localStorage.setItem("rpsID", data.psID);
+                window.location.href = "main/"
             }
         })
         .catch(error => {
-            // Maneja errores de la solicitud
-            console.error('Error en la solicitud fetch:', error);
+            //Maneja errores de la solicitud
+            //console.error('Error en la solicitud fetch:', error);
         });
     })
 })
