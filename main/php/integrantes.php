@@ -28,7 +28,7 @@ if (!isset($_SESSION['aH7rP8sJ3xGvFbK']) && !isset($_SESSION['V6jFpW2qL9aZbR8'])
                     return $usuariosActivos;
                 } catch (PDOException $e) {
                     // Manejo de errores
-                    return array("error" => "Error en la consulta: " . $e->getMessage());
+                    return array("error" => "Error del servidor");
                 }
             }
             try {

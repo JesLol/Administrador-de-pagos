@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
-
-:root{
-    --card-article-h2:#6e40c9;
-    --card-article-bg:#161b22;
-    --card-article-border:#1f242d;
-}
+@import url('../css/header.css');
+@import url('../css/root.css');
+@import url('../css/footer.css');
 
 *{
     margin: 0;
@@ -12,53 +9,17 @@
     box-sizing: border-box;
 }
 
-body{
-    position: relative;
-    background: #0d1117/*#fff*/;
-    min-height: 100vh;
-}
-
-.header-container{
-    padding: 20px 0;
-}
-
-.nav-logo-sp{
-    height: 50px;
-}
-
-.login-nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.nav-btn-container{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.nav-btn-container > button{
-    all: unset;
-    box-sizing: border-box;
-}
-
-.nav-btn-container > div{
-    position: absolute;
-    left: -500px;
-    top: -500px;
-}
-
 /*Main*/
 
 .main-container{
     padding: 20px;
+    padding-top: 100px;
 }
 
 .title-section{
     position: relative;
     padding: 0 20px;
-    display: flexs;
+    display: flex;
 }
 
 .title-section > h1{
@@ -75,6 +36,7 @@ body{
     position: absolute;
     bottom: -18px;
     right: 0;
+    cursor: pointer;
 }
 
 .main-section{
@@ -86,6 +48,7 @@ body{
     padding: 10px;
     border: 2px solid var(--card-article-border);
     background: var(--card-article-bg);
+    box-shadow: 2px 2px 10px #424242;
 }
 
 .estatus-article-container > h2{
@@ -113,7 +76,7 @@ body{
 .fechas-estatus{
     text-align: end;
     font-family: 'Work Sans', sans-serif;
-    color: #a0a0a0;
+    color: #e2e2e2;
 }
 
 .integrantes-article-container{
@@ -122,6 +85,7 @@ body{
     padding: 10px;
     border: 2px solid var(--card-article-border);
     background: var(--card-article-bg);
+    box-shadow: 2px 2px 10px #424242;
 }
 
 .integrantes-article-container > h2{
@@ -135,9 +99,9 @@ body{
 
 .integrantes-container > ul{
     display: grid;
-    grid-template-columns: 1fr; /* Una columna de tamaño flexible */
-    gap: 15px; /* Espaciado entre elementos, ajusta según tus preferencias */
-    list-style: none; /* Elimina los estilos de lista por defecto */
+    grid-template-columns: 1fr;
+    gap: 15px;
+    list-style: none;
     padding: 0;
 }
 
@@ -161,7 +125,7 @@ body{
 
 /*Seccion de footer*/
 
-.main-footer-container{
+/* .main-footer-container{
     height: 150px;
 }
 
@@ -176,4 +140,4 @@ body{
     flex-direction: column;
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+} */

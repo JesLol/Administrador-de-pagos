@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     const userID = localStorage.getItem("rpsID");
     const userType = localStorage.getItem("rpsUserType");
     function mostrarEstatus(fechaPago, estatus, mes){
-        console.log(fechaPago, estatus, mes)
         const fecha = new Date(2023, mes - 1);
         const nombreMes = fecha.toLocaleString('es-MX', { month: 'long' });
         const nombreMesMayuscula = nombreMes.charAt(0).toUpperCase() + nombreMes.slice(1);

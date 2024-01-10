@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+@import url("../css/header.css");
+@import url("../css/root.css");
+@import url("../css/footer.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.historial-main{
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.historial-pagos-h1{
+    font-family: 'Work Sans', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.mi-historial-section{
+    padding: 30px 0;
+}
+
+.mi-historial-article{
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid var(--card-article-border);
+    background: var(--card-article-bg);
+    box-shadow: 2px 2px 10px #424242;
+}
+
+.mi-historial-article > h2{
+    font-family: 'Work Sans', sans-serif;
+    color: var(--card-article-h2);
+}
+
+.historial-div-container{
+    padding: 20px 0;
+}
+
+.pago-ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.pago-li{
+    border: 2px solid #00800080;
+    background: #00ff0050;
+    list-style: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    font-family: 'Work Sans', sans-serif;
+    color: #e2e2e2;
+    box-shadow: 2px 2px 5px #ffffff3f;
+}
+
+.user-img-container > img{
+    height: 60px;
+}

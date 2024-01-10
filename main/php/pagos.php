@@ -18,10 +18,13 @@ if (!isset($_SESSION['aH7rP8sJ3xGvFbK']) && !isset($_SESSION['V6jFpW2qL9aZbR8'])
         else{
             function pagosQuery($userID){
                 include "../../php/conex.php";
+                date_default_timezone_set('America/Mexico_City');
+                $month = date("n");
                 try {
-                    $consulta_pago = "SELECT fecha_pago, month, year, pagado FROM pagos WHERE ID_user = :userID";
+                    $consulta_pago = "SELECT fecha_pago, month, year, pagado FROM pagos WHERE ID_user = :userID AND month = :month";
                     $stmt = $pdo->prepare($consulta_pago);
                     $stmt->bindParam(':userID', $userID);
+                    $stmt->bindParam(':month', $month);
                     $stmt->execute();
                     if($stmt->rowCount() > 0){
                         $resultados = $stmt->fetchAll();
