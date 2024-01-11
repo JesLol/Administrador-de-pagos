@@ -6,8 +6,18 @@ body{
     min-height: 100vh;
 }
 
+.bg-res-main{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #7c7c7c96;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: none;
+}
+
 .header-container{
-    padding: 10px 0;
     position: fixed;
     width: 100%;
     z-index: 90;
@@ -17,48 +27,54 @@ body{
 }
 
 .nav-logo-sp{
+    margin: 10px 0;
     height: 45px;
-    z-index: 100;
+    z-index: 105;
 }
 
 .login-nav{
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    position: relative;
 }
 
 .nav-btn-container{
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 105;
 }
 
 .nav-btn-container > button{
     all: unset;
     box-sizing: border-box;
     cursor: pointer;
-    z-index: 100;
 }
 
-.nav-btn-container > div{
-    height: 1000px;
-    width: 500px;
-    background: var(--header-bg-color);
+#nav-ul-container{
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
     position: absolute;
     color: #c4c4c4;
-    left: -1200px;
-    top: -500px;
+    left: -100vw;
+    top: 0;
     transition: 300ms ease all;
-    border-bottom-right-radius: 80%;
 }
 
-.nav-btn-container > div > div{
-    width: 100%;
+#nav-ul-container > div{
+    width: 85%;
     height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: var(--header-bg-color);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.nav-ul{
+    height: 100%;
+    padding: 75px 0;
+    padding-left: 20px;
 }
 
 .nav-ul > li{

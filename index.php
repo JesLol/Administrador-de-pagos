@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['aH7rP8sJ3xGvFbK'])){
+if(isset($_SESSION['aH7rP8sJ3xGvFbK']) || isset($_SESSION['V6jFpW2qL9aZbR8'])){
     header("location: main/");
     ?>
         <script>

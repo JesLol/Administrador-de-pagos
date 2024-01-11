@@ -23,29 +23,30 @@ if(!isset($_SESSION['aH7rP8sJ3xGvFbK']) && !isset($_SESSION['V6jFpW2qL9aZbR8']))
     <script src="historial.js"></script>
 </head>
 <body>
-    <header class="header-container">
+<header class="header-container">
         <nav class="login-nav">
             <img src="../img/spotify-icon.png" alt="spotify-icon" class="nav-logo-sp">
+            <div id="nav-ul-container">
+                <div>
+                    <ul class="nav-ul">
+                        <li><button id="inicio-nav-btn">Inicio</button></li>
+                        <li><button id="historial-nav-btn" class="historial-nav-btn">Historial de pagos</button></li>
+                        <li><button id="cuenta-nav-btn" class="cuenta-nav-btn">Cuenta</button></li>
+                        <li><button id="admin-nav-btn" class="admin-nav-btn">Admin</button></li>
+                        <li><button id="cerrar-sesion-nav-btn" class="cerrar-sesion-nav-btn">Cerrar Sesion</button></li>
+                    </ul>
+                </div>
+            </div>
             <div class="nav-btn-container">
                 <button id="nav-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="28" width="24" viewBox="0 0 448 512">
                         <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" fill="white"/>
                     </svg>
                 </button>
-                <div id="nav-ul-container">
-                    <div>
-                        <ul class="nav-ul">
-                            <li><button id="inicio-nav-btn">Inicio</button></li>
-                            <li><button id="historial-nav-btn" class="historial-nav-btn">Historial de pagos</button></li>
-                            <li><button id="cuenta-nav-btn" class="cuenta-nav-btn">Cuenta</button></li>
-                            <li><button id="admin-nav-btn" class="admin-nav-btn">Admin</button></li>
-                            <li><button id="cerrar-sesion-nav-btn" class="cerrar-sesion-nav-btn">Cerrar Sesion</button></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </nav>
     </header>
+    <div id="bg-res-main" class="bg-res-main"></div>
     <main class="historial-main">
         <section>
             <h1 class="historial-pagos-h1">Historial de pagos</h1>
